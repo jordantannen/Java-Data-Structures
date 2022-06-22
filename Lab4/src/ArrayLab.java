@@ -37,7 +37,10 @@ public class ArrayLab {
         System.out.println("Sorted Numbers (Ascending): " + Arrays.toString(sortedNumbers));
 
         System.out.println("\n-----------------------------------------------\n");
-        System.out.println("Sorted names with corresponding numbers: ");
+        System.out.println("Sorted names with corresponding numbers: \n");
+        System.out.println("Name    Number");
+        System.out.println("------- -------");
+        parallelSortedPrint(sortedClients, myClientsArray, myClientNumbers);
 
     }
     public static int linSearchString(String[] strArray, String search)
@@ -78,5 +81,15 @@ public class ArrayLab {
             System.out.println("Client name \"" + clients[index] + "\" with client number \"" + clientNum + "\" found at index \"" + index + ".\"");
         else
             System.out.println("Client name not found");
+    }
+
+    public static void parallelSortedPrint(String[] sortedClients, String[] unsortedClients, int[] unsortedNumbers){
+        for (String sortedClient : sortedClients) {
+            for (int j = 0; j < unsortedClients.length; j++) {
+                if (sortedClient.equals(unsortedClients[j])) {
+                    System.out.printf("%-7s %-7s \n", sortedClient, unsortedNumbers[j]);
+                }
+            }
+        }
     }
 }
