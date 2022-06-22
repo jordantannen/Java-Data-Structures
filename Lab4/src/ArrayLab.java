@@ -13,9 +13,11 @@ public class ArrayLab {
         System.out.println("Programmer: Jordan Tannenbaum");
         System.out.println("-----------------------------------------------\n");
 
+        // Instantiating arrays
         String[] myClientsArray = {"Butler", "Samuels", "Bond", "Chang", "Baker", "Davis", "Zheng", "Joe"};
         int[] myClientNumbers = {108, 121, 188, 107, 122, 111, 203, 135};
 
+        // Getting user input
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter a client name to search: ");
@@ -28,6 +30,8 @@ public class ArrayLab {
 
         System.out.println("\n-----------------------------------------------\n");
 
+        // Creating copies of arrays. Used copyOf method as setting 2 arrays equal to each other only sets their
+        // references equal, not their values.
         String[] sortedClients = Arrays.copyOf(myClientsArray, myClientsArray.length);
         Arrays.sort(sortedClients);
         int[] sortedNumbers = Arrays.copyOf(myClientNumbers, myClientNumbers.length);
@@ -37,30 +41,26 @@ public class ArrayLab {
         System.out.println("Sorted Numbers (Ascending): " + Arrays.toString(sortedNumbers));
 
         System.out.println("\n-----------------------------------------------\n");
+
+        // Printing sorted arrays with corresponding numbers
         System.out.println("Sorted names with corresponding numbers: \n");
         System.out.println("Name    Number");
         System.out.println("------- -------");
         parallelSortedPrint(sortedClients, myClientsArray, myClientNumbers);
 
     }
-    public static int linSearchString(String[] strArray, String search)
-    {
-        for(int i = 0; i < strArray.length; i++)
-        {
-            if (search.equals(strArray[i]))
-            {
+    public static int linSearchString(String[] strArray, String search) {
+        for(int i = 0; i < strArray.length; i++) {
+            if (search.equals(strArray[i])) {
                 return i;
             }
         }
         // -1 used as an error
         return -1;
     }
-    public static int linSearchInt(int[] intArray, int num)
-    {
-        for(int i = 0; i < intArray.length; i++)
-        {
-            if (num == intArray[i])
-            {
+    public static int linSearchInt(int[] intArray, int num) {
+        for(int i = 0; i < intArray.length; i++) {
+            if (num == intArray[i]) {
                 return i;
             }
         }
