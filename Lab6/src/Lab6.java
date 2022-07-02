@@ -8,10 +8,8 @@ import java.util.HashMap;
 public class Lab6 {
     public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
-//        FileWriter file = new FileWriter("data.txt");
-//        PrintWriter outFile = new PrintWriter(file);
-        FileReader inFile = new FileReader("data.txt");
-        BufferedReader br = new BufferedReader(inFile);
+        FileWriter file = new FileWriter("data.txt");
+        PrintWriter outFile = new PrintWriter(file);
 
         int numRecords = 0;
         String desc = "";
@@ -19,28 +17,30 @@ public class Lab6 {
         int quantity = 0;
         char location = '\0';
 
-//        System.out.println("How many records are for processing?");
-//        numRecords = input.nextInt();
-//
-//        for (int i = 0; i < numRecords; i++){
-//            input.nextLine();
-//            System.out.println("item description");
-//            desc = input.nextLine();
-//
-//            System.out.println("item cost");
-//            cost = input.nextDouble();
-//
-//            System.out.println("item quantity");
-//            quantity = input.nextInt();
-//
-//            System.out.println("item location");
-//            location = input.next().charAt(0);
-//
-//            outFile.print(desc + ",");
-//            outFile.print(cost + ",");
-//            outFile.print(quantity + ",");
-//            outFile.println(location);
-//        }
+        System.out.println("How many records are for processing?");
+        numRecords = input.nextInt();
+
+        for (int i = 0; i < numRecords; i++){
+            input.nextLine();
+            System.out.println("item description");
+            desc = input.nextLine();
+
+            System.out.println("item cost");
+            cost = input.nextDouble();
+
+            System.out.println("item quantity");
+            quantity = input.nextInt();
+
+            System.out.println("item location");
+            location = input.next().charAt(0);
+
+            outFile.print(desc + ",");
+            outFile.print(cost + ",");
+            outFile.print(quantity + ",");
+            outFile.println(location);
+        }
+        FileReader inFile = new FileReader("data.txt");
+        BufferedReader br = new BufferedReader(inFile);
         System.out.println("Item, Cost, Quantity, Location Code");
         System.out.println("-----------------------------------");
         String line = "";
@@ -83,7 +83,7 @@ public class Lab6 {
         } catch (IOException e){
             e.printStackTrace();
         }
-//        input.close();
-//        outFile.close();
+        input.close();
+        outFile.close();
     }
 }
