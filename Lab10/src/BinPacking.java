@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.*;
 
 class BinPacking {
-    int capacity;
-    int[] itemsToPack = new int[100];
-    int binNumber;
-    int totalNumBins;
+//    int capacity;
+//    int[] itemsToPack = new int[100];
+//    int binNumber;
+//    int totalNumBins;
 
     public static void main(String args[]) {
         ArrayList<Integer> testList = new ArrayList<>();
@@ -17,6 +17,8 @@ class BinPacking {
         testList.add(6);
         FirstFit test = new FirstFit(8, testList);
         test.sortBins();
+        System.out.println(test.getTotalBins());
+        test.printBinTotals();
 
 
         ArrayList<Integer> vect = new ArrayList<>();
