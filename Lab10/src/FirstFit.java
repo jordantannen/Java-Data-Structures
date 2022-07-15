@@ -2,12 +2,12 @@ import java.util.HashMap;
 import java.util.ArrayList;
 
 public class FirstFit {
-    private ArrayList<Integer> itemsToPack;
-    private int binCapacity;
-    private int totalBins;
-    private HashMap<Integer, ArrayList<Integer>> bins = new HashMap<>();
+    protected ArrayList<Integer> itemsToPack;
+    protected int binCapacity;
+    protected int totalBins;
+    protected HashMap<Integer, ArrayList<Integer>> bins = new HashMap<>();
 
-    public static final int DEFAULT_CAPACITY = 10;
+    protected static final int DEFAULT_CAPACITY = 10;
 
     public FirstFit(){
         this(DEFAULT_CAPACITY, new ArrayList<>());
