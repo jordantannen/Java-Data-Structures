@@ -2,29 +2,7 @@ import java.util.ArrayList;
 import java.util.*;
 
 class BinPacking {
-//    int capacity;
-//    int[] itemsToPack = new int[100];
-//    int binNumber;
-//    int totalNumBins;
-
     public static void main(String args[]) {
-//        ArrayList<Integer> testList = new ArrayList<>();
-//        testList.add(7);
-//        testList.add(8);
-//        testList.add(1);
-//        testList.add(2);
-//        testList.add(4);
-//        testList.add(6);
-//        FirstFit test = new FirstFit(8, testList);
-//        test.sortBins();
-//        System.out.println(test.getTotalBins());
-//        test.printBinTotals();
-//        test.printAllBinItems();
-//        NextFit test2 = new NextFit(8, testList);
-//        test2.sortBins();
-//        System.out.println(test2.getTotalBins());
-//        test2.printBinTotals();
-
 
         ArrayList<Integer> vect = new ArrayList<>();
         int count = 0;
