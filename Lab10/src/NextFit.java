@@ -3,10 +3,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class NextFit extends FirstFit{
-//    private ArrayList<Integer> itemsToPack;
-//    private int binCapacity;
-//    private int totalBins;
-//    private HashMap<Integer, ArrayList<Integer>> bins = new HashMap<>();
 
     public static final int DEFAULT_CAPACITY = 10;
     public NextFit(int binCapacity, ArrayList<Integer> itemsToPack){
