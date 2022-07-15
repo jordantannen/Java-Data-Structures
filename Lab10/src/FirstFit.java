@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.ArrayList;
 
 public class FirstFit {
-    private ArrayList<Integer> itemsToPack = new ArrayList<>();
+    private ArrayList<Integer> itemsToPack;
     private int binCapacity;
     private int totalBins;
     private HashMap<Integer, ArrayList<Integer>> bins = new HashMap<>();
@@ -51,7 +51,7 @@ public class FirstFit {
         }
     }
 
-    private int sumBin(ArrayList<Integer> bin){
+    int sumBin(ArrayList<Integer> bin){
         int count = 0;
         for (int item : bin)
             count += item;

@@ -19,6 +19,8 @@ class BinPacking {
         test.sortBins();
         System.out.println(test.getTotalBins());
         test.printBinTotals();
+        NextFit test2 = new NextFit(8, testList);
+        test2.sortBins();
 
 
         ArrayList<Integer> vect = new ArrayList<>();
