@@ -1,6 +1,5 @@
 import java.util.HashMap;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class NextFit extends FirstFit{
 
@@ -28,6 +27,5 @@ public class NextFit extends FirstFit{
                 totalBins++;
             }
         }
-        System.out.println(bins);
     }
 }

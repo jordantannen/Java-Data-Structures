@@ -38,7 +38,6 @@ public class FirstFit {
                 totalBins++;
             }
         }
-        System.out.println(bins);
     }
 
     public int getTotalBins(){
@@ -51,7 +50,22 @@ public class FirstFit {
         }
     }
 
-    int sumBin(ArrayList<Integer> bin){
+    public void printAllBinItems(){
+        for (int key : bins.keySet()){
+            for (int item : bins.get(key)){
+                System.out.println("Bin " + key + ": " + item);
+            }
+        }
+    }
+
+    public void printAllResults(){
+        this.sortBins();
+        this.printAllBinItems();
+        System.out.println("\nTotal Bins: " + this.getTotalBins() + "\n\nValues for Each Bin:");
+        this.printBinTotals();
+    }
+
+    protected int sumBin(ArrayList<Integer> bin){
         int count = 0;
         for (int item : bin)
             count += item;
