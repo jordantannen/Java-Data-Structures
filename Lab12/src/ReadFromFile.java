@@ -85,7 +85,8 @@ public class ReadFromFile {
         System.out.println("Customers Not in Rewards Program: ");
         ArrayList<String> hasBeenPrinted = new ArrayList<>();
         for (int i = 0; i < count; i++){
-            if (Objects.equals(parallelArrays.get(firstRow.get(1)).get(i), "No") && !hasBeenPrinted.contains(parallelArrays.get(firstRow.get(0)).get(i))){
+            if (Objects.equals(parallelArrays.get(firstRow.get(1)).get(i), "No")
+                    && !hasBeenPrinted.contains(parallelArrays.get(firstRow.get(0)).get(i))){
                 System.out.println(parallelArrays.get(firstRow.get(0)).get(i));
                 hasBeenPrinted.add(parallelArrays.get(firstRow.get(0)).get(i));
             }
@@ -96,9 +97,13 @@ public class ReadFromFile {
         System.out.println("-------------------------------------------------------------------------------------------");
         System.out.println("Range of Transaction Dates: ");
 
+        // The last date is set to a string to avoid a really long line.
+        String lastDateStr = parallelArrays.get(firstRow.get(2)).get(parallelArrays.get(firstRow.get(2)).size() - 1);
+
         Date firstDate = new SimpleDateFormat("MM/dd/yyyy").parse(parallelArrays.get(firstRow.get(2)).get(0));
-        Date lastDate = new SimpleDateFormat("MM/dd/yyyy").parse(parallelArrays.get(firstRow.get(2)).get(parallelArrays.get(firstRow.get(2)).size() - 1));
-        System.out.println(lastDate.getDate() - firstDate.getDate() + " Days");
+        Date lastDate = new SimpleDateFormat("MM/dd/yyyy").parse(lastDateStr);
+        System.out.println(lastDate.getDate() - firstDate.getDate() +
+                " days ranging from " + parallelArrays.get(firstRow.get(2)).get(0) + " to " + lastDateStr);
     }
 
     public static double getTotal(ArrayList<String> list){
